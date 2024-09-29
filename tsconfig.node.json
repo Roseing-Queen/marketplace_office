@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": ["ES2023","dom"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -11,12 +11,20 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "jsx": "react",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "types": ["vite/client", "node"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts","src",
+    "build","public","mock",
+    "config"]
 }
