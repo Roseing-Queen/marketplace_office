@@ -5,6 +5,8 @@ import store from "./redux";
 import React from "react";
 import {RouterProvider} from "react-router";
 import router from "./router";
+import './language/index.ts'
+
 
 createRoot(document.getElementById('root')!).render(
     <Provider store={store}>
