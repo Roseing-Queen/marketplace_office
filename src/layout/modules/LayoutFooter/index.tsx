@@ -3,6 +3,6 @@ import React from "react";
 import './index.scss'
 
 const LayoutFooter = () => {
-  return (<Footer className={'footerStyle'}>Footer</Footer>);
+  return (<Footer className={'footerStyle'}>Marketplace ©2021</Footer>);
 }
 export default LayoutFooter
