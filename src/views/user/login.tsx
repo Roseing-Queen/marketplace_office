@@ -39,7 +39,7 @@ const Login = () => {
           <Card.Meta title={"Marketplace Office"} style={{textAlign:'center', fontSize:30, fontWeight:'bold',marginBottom:50}}/>
           <Form
               name="basic"
-              labelCol={{ span: 8 }}
+              labelCol={{ span: 6 }}
               wrapperCol={{ span: 16 }}
               style={{minWidth:500 }}
               initialValues={{ remember: true }}
@@ -47,32 +47,37 @@ const Login = () => {
               autoComplete="off"
           >
             <Form.Item<FieldType>
-                label="Username"
+                label={t('user.username')}
                 name="username"
                 rules={[{ required: true, message: 'Please input your username!' }]}
             >
               <Input />
             </Form.Item>
-
             <Form.Item<FieldType>
-                label="Password"
+                label={t('user.password')}
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
               <Input.Password />
             </Form.Item>
-
+            <Form.Item<FieldType>
+                label={t('user.VerificationCode')}
+                name="password"
+                rules={[{ required: true, message: 'Please input your password!' }]}
+            >
+              <Input.Password />
+            </Form.Item>
             <Form.Item<FieldType>
                 name="remember"
                 valuePropName="checked"
-                wrapperCol={{ offset: 8, span: 16 }}
+                wrapperCol={{ span: 24 }}
             >
-              <Checkbox>Remember me</Checkbox>
+              <div className={"others"}><Checkbox>{t('user.rememberMe')}</Checkbox>
+                <a onClick={() => {}}>?{t('user.forgetPassword')}</a></div>
             </Form.Item>
-
-            <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-              <Button type="primary" htmlType="submit">
-                Submit
+            <Form.Item  wrapperCol={{ span: 24 }} style={{margin:"0 !important"}}>
+              <Button type="primary" htmlType="submit" style={{width:'100%',textAlign:'center',}}>
+                {t('user.login')}
               </Button>
             </Form.Item>
           </Form>
