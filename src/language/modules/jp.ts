@@ -13,5 +13,6 @@ export default {
         VerificationCode: "認証コード",
         rememberMe: "ログイン状態を保存する",
         forgetPassword: "パスワードを忘れた場合",
-    }
+    },
+    message:{}
 }

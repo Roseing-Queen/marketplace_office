@@ -18,6 +18,7 @@ class Data {
                     this.messageApi.open({
                         type: 'error',
                         content: '数据库打开失败',
+
                     });
                     reject(err);
                 };

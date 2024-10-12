@@ -12,6 +12,7 @@ export default {
         username: "用户名",
         VerificationCode: "验证码",
         forgetPassword: "忘记密码",
-        rememberMe:"记住我"
-    }
+        rememberMe:"保持登录状态"
+    },
+    message:{}
 }

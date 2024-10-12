@@ -13,5 +13,6 @@ export default {
         VerificationCode: "驗證碼",
         rememberMe: "記住我",
         forgetPassword: "忘記密碼",
-    }
+    },
+    message:{}
 }

@@ -1,7 +1,32 @@
-.siderStyle{
+.sliderStyle {
   max-width: 200px;
   text-align: center;
-  line-height: 120px;
   color: #7a7a7a;
   background-color: #EBEBEB;
+}
+
+.slider_head {
+  width: 100%;
+  height: 120px;
+  margin-top: 5px;
+}
+
+.slider_icon {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slider_title_content {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }

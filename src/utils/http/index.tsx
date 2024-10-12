@@ -48,8 +48,8 @@ class Server  {
             }
         );
     }
-    async get(url: string, params?: any, config?: any) {
-        return await this.request.get(url, { params, ...config });
+    async get(url: string, params?: any, config?: any,data?:any) {
+        return await this.request.get(url, {data, params, ...config });
     }
     async post(url: string, data?: any, config?: any) {
         return await this.request.post(url, data, config);

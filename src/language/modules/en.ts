@@ -13,5 +13,6 @@ export default {
         VerificationCode: "Verification Code",
         forgetPassword: "forget password",
         rememberMe: "remember me",
-    }
+    },
+    message:{}
 }

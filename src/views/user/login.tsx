@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import Layout, {Content, Header} from "antd/lib/layout/layout";
 import "./styles/login.scss"
-import {Button, Card, Checkbox, Form, Input, Select} from "antd";
+import {Button, Card, Checkbox, Form, Input, Select, Space} from "antd";
 import {useTranslation} from "react-i18next";
 type FieldType = {
-  username?: string;
-  password?: string;
+  username: string;
+  password: string;
   remember?: string;
+  VerificationCode:string;
 };
 
 const Login = () => {
@@ -19,7 +20,7 @@ const Login = () => {
   let [language, setLanguage] = useState("language");
   const changeLoginForm=()=>{}
   return <div>
-    <Layout style={{width:'100%', height:'100vh', backgroundImage: 'url(/assets/image/login/background.jpg)'}}>
+    <Layout style={{width:'100%', height:'100vh',backgroundImage:`url('/src/assets/image/login/background.jpg')`,backgroundSize:'cover',backgroundPosition:'center'}}>
       <Header className={"header"}>
         <Form.Item<FieldType>
             label={language}
@@ -35,7 +36,7 @@ const Login = () => {
         </Form.Item>
       </Header>
       <Content className={"content"}>
-        <Card bordered={true} style={{ minWidth: 500,borderRadius:20 }}>
+        <Card bordered={true} style={{ minWidth: 500,borderRadius:20,backgroundColor:'rgba(255,255,255,0.85)'}}>
           <Card.Meta title={"Marketplace Office"} style={{textAlign:'center', fontSize:30, fontWeight:'bold',marginBottom:50}}/>
           <Form
               name="basic"
@@ -65,7 +66,13 @@ const Login = () => {
                 name="password"
                 rules={[{ required: true, message: 'Please input your password!' }]}
             >
-              <Input.Password />
+              <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+                <Space.Compact style={{ width: '100%' }}>
+                  <Input defaultValue="Combine input and button" />
+                  <img src="/src/assets/image/login/background.jpg" alt="verificationCode" style={{width:'102px',height:'32px'}} />
+                  {/*<Button type="primary">获取验证码</Button>*/}
+                </Space.Compact>
+              </Space>
             </Form.Item>
             <Form.Item<FieldType>
                 name="remember"
