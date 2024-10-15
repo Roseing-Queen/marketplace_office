@@ -4,7 +4,7 @@ export const layout=createSlice({
   name: "layout",
   initialState: {
     sidebar: {
-      isOpen: false,
+      isOpen: true,
     },
   },
   reducers: {

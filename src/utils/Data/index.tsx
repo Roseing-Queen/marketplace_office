@@ -42,7 +42,6 @@ class Data {
 
     async DataDataBaseAddData(data: any, name: string, tableName: string, DataBaseName: string) {
         this.validateInput(data, name, DataBaseName);
-
         try {
             const db = await this.getDB(DataBaseName, 1, tableName, name);
             const transaction = db.transaction([tableName], 'readwrite');
