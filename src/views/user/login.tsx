@@ -40,6 +40,7 @@ const Login = () => {
                     name="username"
                     style={{marginRight: '10px', width: '15vw', minWidth: '300px'}}
                 >
+                    {/* language selector */}
                     <Select onChange={changeLanguage} defaultValue="en">
                         <Select.Option value="zh_cn">简体中文</Select.Option>
                         <Select.Option value="zh_tw">繁體中文</Select.Option>
